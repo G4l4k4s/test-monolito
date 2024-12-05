@@ -24,4 +24,4 @@ jobs:
                 coverage: none
 
             - name: saludar
-              run: php --version
+              run: php -r "hola pai"

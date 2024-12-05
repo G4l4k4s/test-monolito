@@ -1,0 +1,27 @@
+name : "testeto de la aplication"
+
+on : 
+    push:
+        branches:
+            - realease
+        pull_request:
+            branches:
+            - realease
+
+jobs:
+    testing: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: ubuntu-latest
+              uses: actions/checkout@v3
+
+            - name: Set up PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: '8.3'
+                extensions: mbstring, pdo, bcmath
+                ini-values: post_max_size=256M, upload_max_filesize=256m
+                coverage: none
+
+            - name: saludar
+              run: php --version

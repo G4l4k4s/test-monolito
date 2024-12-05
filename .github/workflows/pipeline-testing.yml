@@ -1,4 +1,4 @@
-name : "Testeo de la aplicacio"
+name : "Testeo de la aplicacion"
 
 on:
     push:
